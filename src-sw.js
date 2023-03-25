@@ -5,7 +5,7 @@ console.log('this is my custom service worker');
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);
 
 // An example runtime caching route for requests that aren't handled by the
-// precache, in this case same-origin .png requests like those from in public/
+// precache, in this case same-origin .jpeg requests like those from in public/
 workbox.routing.registerRoute(
     // Add in any other file extensions or routing criteria as needed.
     ({ url }) => url.origin === self.location.origin && url.pathname.endsWith('.jpeg'), // Customize this strategy as needed, e.g., by changing to CacheFirst.
